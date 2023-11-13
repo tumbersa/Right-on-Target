@@ -30,32 +30,13 @@ class IntViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("viewDidLoad")
         game = GameInt(startValue: 1, endValue: 50, rounds: 5)
         gameRound = GameRound.shared
         
        updateLabelWithSecretNumber(newText: String(gameRound.currentSecretValue))
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("viewWillApear")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("viewDidApear")
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("viewWillDisapear")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("viewDidDisapear")
-    }
+   
     
     
     // MARK: - Взаимодействие View - Model

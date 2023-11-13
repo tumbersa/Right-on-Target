@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2nG-WG-KId">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -14,7 +14,7 @@
         <!--Selection Controller-->
         <scene sceneID="uP6-1c-hCU">
             <objects>
-                <viewController id="2nG-WG-KId" customClass="SelectionController" customModule="Right_on_Target" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="2nG-WG-KId" customClass="SelectionController" customModule="Right_on_Target" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8VE-qI-scD">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsP-WV-0Cd">
-                                <rect key="frame" x="248" y="179" width="71.5" height="35"/>
+                                <rect key="frame" x="260.5" y="179" width="71.5" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Цвета"/>
                                 <connections>
@@ -49,9 +49,9 @@
                         <constraints>
                             <constraint firstItem="hCO-u6-dA0" firstAttribute="centerY" secondItem="EFa-HN-wKE" secondAttribute="centerY" id="LXc-Jl-IxK"/>
                             <constraint firstItem="hCO-u6-dA0" firstAttribute="centerX" secondItem="EFa-HN-wKE" secondAttribute="centerX" id="QeX-d4-5rf"/>
-                            <constraint firstItem="JsP-WV-0Cd" firstAttribute="leading" secondItem="EFa-HN-wKE" secondAttribute="leading" constant="200" id="bIo-Iw-NXV"/>
+                            <constraint firstItem="JsP-WV-0Cd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EFa-HN-wKE" secondAttribute="leading" constant="200" id="bIo-Iw-NXV"/>
                             <constraint firstItem="JsP-WV-0Cd" firstAttribute="centerY" secondItem="EFa-HN-wKE" secondAttribute="centerY" id="crk-Vw-DZL"/>
-                            <constraint firstItem="hCO-u6-dA0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JsP-WV-0Cd" secondAttribute="trailing" constant="20" id="ihx-9N-SqE"/>
+                            <constraint firstItem="hCO-u6-dA0" firstAttribute="leading" secondItem="JsP-WV-0Cd" secondAttribute="trailing" constant="20" id="ihx-9N-SqE"/>
                             <constraint firstItem="L6d-B1-Z34" firstAttribute="centerY" secondItem="EFa-HN-wKE" secondAttribute="centerY" id="obt-BH-3B3"/>
                             <constraint firstItem="L6d-B1-Z34" firstAttribute="leading" secondItem="hCO-u6-dA0" secondAttribute="trailing" constant="20" id="qHO-0c-19g"/>
                             <constraint firstItem="EFa-HN-wKE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="L6d-B1-Z34" secondAttribute="trailing" id="zaU-ZF-3Ew"/>
@@ -249,13 +249,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

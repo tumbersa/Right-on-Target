@@ -20,6 +20,35 @@ final class SelectionController: UIViewController {
         self.present(colorViewController, animated: true)
     }
     
+    override func loadView() {
+        super.loadView()
+        
+        print("loadView")
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("viewDidLoad")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillApear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("viewDidApear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("viewWillDisapear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("viewDidDisapear")
+    }
     private func getColorViewController()-> ColorViewController{
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ColorViewController")

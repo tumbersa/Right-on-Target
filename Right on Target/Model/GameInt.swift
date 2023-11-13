@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class Game: GameProtocol {
+final class GameInt: GameProtocol {
     var gameRound: GameRoundProtocol!
     var generator: GeneratorProtocol!
     var minSecretValue: Int

@@ -31,7 +31,7 @@ class IntViewController: UIViewController {
         super.viewDidLoad()
         
         print("viewDidLoad")
-        game = Game(startValue: 1, endValue: 50, rounds: 5)
+        game = GameInt(startValue: 1, endValue: 50, rounds: 5)
         gameRound = GameRound.shared
         
        updateLabelWithSecretNumber(newText: String(gameRound.currentSecretValue))

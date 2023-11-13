@@ -16,6 +16,7 @@ protocol GameProtocol {
 
 protocol GeneratorProtocol {
     func getRandomValue(minValue: Int, maxValue: Int) -> Int
+    func getRandomHexColor() -> String
 }
 
 protocol GameRoundProtocol{

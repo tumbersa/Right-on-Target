@@ -17,8 +17,10 @@
 		A4233EDC2AFF775900532F36 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4233EDB2AFF775900532F36 /* Generator.swift */; };
 		A4421AF92B02322A00B2FE8D /* SelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4421AF82B02322A00B2FE8D /* SelectionController.swift */; };
 		A4421AFB2B02327E00B2FE8D /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4421AFA2B02327E00B2FE8D /* ColorViewController.swift */; };
+		A4760BBD2B027926005F5101 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4760BBC2B027926005F5101 /* UIColor+Extensions.swift */; };
+		A4760BBF2B027A21005F5101 /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4760BBE2B027A21005F5101 /* GameColor.swift */; };
 		A4CDDC2F2AFF44C30045CA02 /* ModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDDC2E2AFF44C30045CA02 /* ModelProtocols.swift */; };
-		A4CDDC312AFF4C340045CA02 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDDC302AFF4C340045CA02 /* Game.swift */; };
+		A4CDDC312AFF4C340045CA02 /* GameInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CDDC302AFF4C340045CA02 /* GameInt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +36,10 @@
 		A4233EDB2AFF775900532F36 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		A4421AF82B02322A00B2FE8D /* SelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionController.swift; sourceTree = "<group>"; };
 		A4421AFA2B02327E00B2FE8D /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		A4760BBC2B027926005F5101 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		A4760BBE2B027A21005F5101 /* GameColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
 		A4CDDC2E2AFF44C30045CA02 /* ModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocols.swift; sourceTree = "<group>"; };
-		A4CDDC302AFF4C340045CA02 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		A4CDDC302AFF4C340045CA02 /* GameInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +72,13 @@
 		A41247B42ADA628C0019C2AE /* Right on Target */ = {
 			isa = PBXGroup;
 			children = (
-				A4CDDC2D2AFF44080045CA02 /* Model */,
 				A41247B52ADA628C0019C2AE /* AppDelegate.swift */,
-				A4421AFA2B02327E00B2FE8D /* ColorViewController.swift */,
 				A41247B72ADA628C0019C2AE /* SceneDelegate.swift */,
+				A4CDDC2D2AFF44080045CA02 /* Model */,
+				A4421AFA2B02327E00B2FE8D /* ColorViewController.swift */,
 				A4421AF82B02322A00B2FE8D /* SelectionController.swift */,
 				A41247B92ADA628C0019C2AE /* IntViewController.swift */,
+				A4760BBC2B027926005F5101 /* UIColor+Extensions.swift */,
 				A41247BB2ADA628C0019C2AE /* Main.storyboard */,
 				A41247BE2ADA628E0019C2AE /* Assets.xcassets */,
 				A41247C02ADA628E0019C2AE /* LaunchScreen.storyboard */,
@@ -86,9 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				A4CDDC2E2AFF44C30045CA02 /* ModelProtocols.swift */,
-				A4CDDC302AFF4C340045CA02 /* Game.swift */,
+				A4CDDC302AFF4C340045CA02 /* GameInt.swift */,
 				A4233ED92AFF770D00532F36 /* GameRound.swift */,
 				A4233EDB2AFF775900532F36 /* Generator.swift */,
+				A4760BBE2B027A21005F5101 /* GameColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,13 +171,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4233EDC2AFF775900532F36 /* Generator.swift in Sources */,
-				A4CDDC312AFF4C340045CA02 /* Game.swift in Sources */,
+				A4760BBD2B027926005F5101 /* UIColor+Extensions.swift in Sources */,
+				A4CDDC312AFF4C340045CA02 /* GameInt.swift in Sources */,
 				A4CDDC2F2AFF44C30045CA02 /* ModelProtocols.swift in Sources */,
 				A41247BA2ADA628C0019C2AE /* IntViewController.swift in Sources */,
 				A41247B62ADA628C0019C2AE /* AppDelegate.swift in Sources */,
 				A4233EDA2AFF770D00532F36 /* GameRound.swift in Sources */,
 				A4421AF92B02322A00B2FE8D /* SelectionController.swift in Sources */,
 				A4421AFB2B02327E00B2FE8D /* ColorViewController.swift in Sources */,
+				A4760BBF2B027A21005F5101 /* GameColor.swift in Sources */,
 				A41247B82ADA628C0019C2AE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,27 +7,21 @@
 
 import UIKit
 final class ColorViewController: UIViewController {
-    
-    private let generator = Generator()
-    private var secretStringColor: String = ""
-    
-    private var secretColor: UIColor!
-    private var numCorrectVar: Int = 0
-    private var score: Int = 0
-    private var rounds: Int = 0
-    
+    private var gameColor = GameColor()
+
     @IBOutlet var secretColorLabel: UILabel!
     
     @IBOutlet var varButtons: [UIButton]!
     
     
     @IBAction func nextRound(){
-        updateGame()
-        if rounds == 5 {
-            showAlertWith(score: score)
-            rounds = 0
-            score = 0
-            updateGame()
+        if gameColor.isGameEnded {
+            showAlertWith(score: gameColor.score)
+            gameColor.restartGame()
+            updateScreen()
+        } else {
+            gameColor.startNewRound()
+            updateScreen()
         }
     }
     
@@ -36,21 +30,21 @@ final class ColorViewController: UIViewController {
     }
     
     @IBAction func checkColor(_ sender: UIButton){
-        if sender.tag == numCorrectVar {
+        if sender.tag == gameColor.numCorrectVar {
             highlightButton(button: sender,flag: true)
-            score += 1
+            gameColor.plusOneScore()
         } else {
             highlightButton(button: sender, flag: false)
         }
-        
+
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateGame()
-        
+        gameColor.startNewRound()
+        updateScreen()
     }
     
     private func removeBacklight(buttons: [UIButton]){
@@ -84,25 +78,17 @@ final class ColorViewController: UIViewController {
         }
     }
     
-    private func updateGame(){
-        secretStringColor = generator.getRandomHexColor()
+    private func updateScreen(){
         
-        secretColor = UIColor(hex: secretStringColor)
-        secretColorLabel.backgroundColor = secretColor
-        
-        numCorrectVar = generator.getRandomValue(minValue: 1, maxValue: 4)
-        
+        secretColorLabel.backgroundColor = UIColor(hex: gameColor.secretStringColor)
         for i in varButtons {
-            if i.tag == numCorrectVar {
-                i.setTitle(secretStringColor, for: .normal)
+            if i.tag == gameColor.numCorrectVar {
+                i.setTitle(gameColor.secretStringColor, for: .normal)
             } else {
-                i.setTitle(generator.getRandomHexColor(), for: .normal)
+                i.setTitle(gameColor.generator.getRandomHexColor(), for: .normal)
             }
         }
-        rounds += 1
         removeBacklight(buttons: varButtons)
     }
-    
-    
 }
 
